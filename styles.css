@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0 0 18px;
+    color: #1f2937;
+    font-size: 24px;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #5b8cff, #7ed3ff);
+    color: white;
+    box-shadow: 0 18px 30px rgba(92, 111, 255, 0.15);
+    margin-bottom: 18px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #4e7df7, #6fbbff);
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped .card-back {
+    transform: rotateY(360deg);
+}
+
+.word-index {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.word-display {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+.word-difficulty {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.back-item {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.back-item .label {
+    display: inline-block;
+    min-width: 80px;
+    font-weight: 700;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #3b82f6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button-group button:hover {
+    background-color: #2563eb;
+}
+
+.admin-container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.admin-header {
+    margin: 0 0 18px;
+    font-size: 24px;
+    color: #111827;
+    text-align: center;
+}
+
+.input-grid {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.input-grid input,
+.input-grid textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-grid textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.admin-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.admin-buttons button {
+    background-color: #10b981;
+}
+
+.admin-buttons button:hover {
+    background-color: #059669;
+}
+
+.admin-result {
+    font-size: 14px;
+    min-height: 20px;
+    color: #111827;
+}
+
+.admin-list {
+    margin-top: 18px;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.admin-list h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #111827;
+}
+
+.admin-list-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.api-display {
+    margin-top: 14px;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    display: grid;
+    gap: 10px;
+    color: #1f2937;
+}
+
+.api-display.hidden {
+    display: none;
+}
+
+.api-results {
+    margin-top: 14px;
+    display: grid;
+    gap: 12px;
+}
+
+.api-result-item {
+    background: #ffffff;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    color: #1f2937;
+}
+
+.api-result-header {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.api-result-buttons {
+    margin-top: 10px;
+}
+
+.api-result-buttons button {
+    width: 100%;
+    background-color: #2563eb;
+}

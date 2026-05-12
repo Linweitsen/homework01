@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高中單字書</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>高中單字書</h1>
+        <div class="card" id="card">
+            <div class="card-front" id="card-front">
+                <div class="word-index" id="word-index">0 / 0</div>
+                <div class="word-display" id="word-display">單字將顯示在這裡</div>
+                <div class="word-difficulty" id="word-difficulty">難易度：-</div>
+            </div>
+            <div class="card-back" id="card-back">
+                <div class="back-item"><span class="label">詞性：</span><span id="word-pos">-</span></div>
+                <div class="back-item"><span class="label">字首 / 字根：</span><span id="word-root">-</span></div>
+                <div class="back-item"><span class="label">例句：</span><span id="word-example">-</span></div>
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="prev-btn">上一個</button>
+            <button id="flip-btn">翻面</button>
+            <button id="next-btn">下一個</button>
+        </div>
+        <div class="button-group">
+            <button id="open-admin-btn">管理介面</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

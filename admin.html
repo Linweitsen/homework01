@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理介面 - 單字書</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1 class="admin-header">管理介面</h1>
+        <div class="input-grid">
+            <input type="text" id="admin-english" placeholder="英文單字">
+            <input type="text" id="admin-pos" placeholder="詞性">
+            <input type="text" id="admin-root" placeholder="字首 / 字根">
+            <input type="text" id="admin-difficulty" placeholder="難易度：簡單 / 中等 / 困難">
+            <textarea id="admin-example" placeholder="例句"></textarea>
+        </div>
+        <div class="admin-buttons">
+            <button id="search-api-btn">API 查單字資料</button>
+            <button id="admin-add-btn">新增單字</button>
+            <button id="back-btn">返回單字書</button>
+        </div>
+        <div id="admin-result" class="admin-result"></div>
+        <div id="api-display" class="api-display hidden">
+            <div><strong>字首 / 字根：</strong><span id="api-root">-</span></div>
+            <div><strong>詞性：</strong><span id="api-pos">-</span></div>
+            <div><strong>例句：</strong><span id="api-example">-</span></div>
+        </div>
+        <div class="admin-list" id="admin-list">
+            <h3>已新增單字</h3>
+            <div id="custom-words"></div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
